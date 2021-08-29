@@ -2,7 +2,7 @@
     include 'header.php';
 ?>
  <li class="unactive">
-                    <a href="#">New task</a>
+                    <a href="form.php">New task</a>
                 </li>
                 <li class="active">
                     <a href="index.php">TODO list</a>
