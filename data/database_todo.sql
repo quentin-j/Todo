@@ -17,7 +17,9 @@ CREATE TABLE `todos` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 INSERT INTO `todos` (`id`, `title`, `task`, `checked`) VALUES
-(1,	'todo 2',	'change status',	0),
+(1,	'todo 2',	'change status',	1),
 (2,	'todo 3',	'detail a TODO',	0),
-(3,	'todo 1',	'list my TODOs',	1),
+(3,	'todo 1',	'list my TODOs',	0),
 (4,	'todo 4',	'add a new TODO',	0);
+
+-- 2021-08-29 15:38:17

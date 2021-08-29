@@ -23,3 +23,10 @@ input.is-invalid {
 input.is-invalid::placeholder {
     color: white;
 }
+.right {
+    float: right;
+    margin: auto;
+}
+.reorganize {
+    border-radius: 5px;
+}
