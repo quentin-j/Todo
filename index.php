@@ -1,23 +1,7 @@
 <?php
-    require 'data/db_connect.php';
+    include 'header.php';
 ?>
-<!DOCTYPE html>
-<html>
-
-<head>
-    <meta charset="UTF-8" />
-    <title>TODO</title>
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-    <header class="container">
-        <h1>TODO</h1>
-        <nav>
-            <ul class="nav nav-tabs">
-                <li class="unactive">
+ <li class="unactive">
                     <a href="#">New task</a>
                 </li>
                 <li class="active">
@@ -28,7 +12,6 @@
     </header>
     <main class="container">
         <h2>TODO list</h2>
-
         <ul class="list-group">
             <?php
                 $todos = $connect->query("SELECT * FROM todos ORDER BY checked ASC, id DESC;");
@@ -45,7 +28,7 @@
 
                             <span class="checked"><?php echo $todo['title'] ?></span>
 
-                            <a href="#" class="btn btn-info right">See more</a>
+                            <a href="single.php?id=<?php echo $todo['id'] ?>" class="btn btn-info right">See more</a>
                         
                             <?php }else{ ?>
 
@@ -55,7 +38,13 @@
 
                             <span><?php echo $todo['title'] ?></span>
 
-                            <a href="#" class="btn btn-info right">See more</a>
+                            <a href="single.php?id=<?php 
+                            if(isset($todo['id'])){
+                            echo $todo['id'] ;
+                            }else{
+                                header('Location: 404.php');
+                            }
+                            ?>" class="btn btn-info right">See more</a>
 
                             <?php } ?>
                     </div>
