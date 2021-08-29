@@ -1,0 +1,25 @@
+
+.list-group-item:hover {
+    background-color: aliceblue;
+}
+.glyphicon {
+    font-size: 1.4em;
+    vertical-align: text-bottom;
+}
+.checked {
+    text-decoration:  line-through;
+    color: grey;
+}
+.checked:hover {
+    text-decoration:  line-through;
+    color: grey;
+}
+input.is-invalid {
+    border: 1px solid red;
+    background-color: rgb(235, 83, 83);
+    color: white;
+    font-weight: 300;
+}
+input.is-invalid::placeholder {
+    color: white;
+}
